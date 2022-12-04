@@ -4,7 +4,7 @@ RSpec.configure do |config|
     DatabaseCleaner.clean_with(:truncation)
   end
   # Antes de cada teste, o databaseCleaner utiliza a estrategia de transaction
-  # isso significa que se ao executar alguma tarefa no banco de dados algo der errado ele lança um erro 
+  # isso significa que se ao executar alguma tarefa no banco de dados algo der errado ele lança um erro
   config.before(:each) do
     DatabaseCleaner.strategy = :transaction
   end
