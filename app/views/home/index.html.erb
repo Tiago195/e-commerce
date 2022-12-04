@@ -1,2 +1,14 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1> Bem vindo </h1>
+
+<% if user_signed_in? %>
+  <h2> Ola, usuario </h2>
+  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+<% else %>
+  <h2>
+    Vc ainda não esta logado
+    <%= link_to "Sign up", new_user_registration_path %>
+  </h2>
+  <span>
+    Ou faça <%= link_to "Login", new_user_session_path %>
+  </span>
+<% end %>
