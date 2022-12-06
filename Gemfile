@@ -85,5 +85,6 @@ group :test do
   gem 'shoulda-matchers'
   gem 'simplecov'
   gem 'vcr'
+  gem 'webmock'
   gem 'webdrivers'
 end

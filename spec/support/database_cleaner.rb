@@ -1,6 +1,6 @@
 RSpec.configure do |config|
   # Antes de executar o rspec, o databaseCleaner limpa o banco de dados com truncationn
-  config.before(:suit) do
+  config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)
   end
   # Antes de cada teste, o databaseCleaner utiliza a estrategia de transaction
