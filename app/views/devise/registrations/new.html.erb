@@ -8,22 +8,34 @@
                 autofocus: true,
                 placeholder: "E-mail",
                 label: false,
-                input_html: { autocomplete: "email" }%>
+                input_html: { autocomplete: "email", class: "input-down" }%>
     <%= f.input :password,
                 required: true,
                 label: false,
                 placeholder: "Senha",
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
+                input_html: { autocomplete: "new-password", class: "rounded-0" } %>
     <%= f.input :password_confirmation,
                 required: true,
                 label: false,
                 placeholder: "Confirmar senha",
-                input_html: { autocomplete: "new-password" } %>
+                input_html: { autocomplete: "new-password", class: "input-up mb-2" } %>
+    <%= f.input :name,
+                required: true,
+                label: false,
+                placeholder: "Nome",
+                input_html: { class: "input-down" }%>
+    <%= f.input :phone,
+                required: true,
+                label: false,
+                placeholder: "Telefone",
+                input_html: { class: "input-up" }%>
   </div>
+
+
 
   <div class="text-center">
     <%= f.error_notification class: 'p-1' %>
+    <%# <%= render 'layouts/shared/flash' if flash.present? > %>
   </div>
 
   <%= render 'devise/shared/button_sumbit', f: f, text: 'Cadastrar' %>
